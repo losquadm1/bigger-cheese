@@ -5,6 +5,8 @@ import Container from "@components/Container.astro";
 import AstroLogo from "@assets/images/astro-logo-light-gradient.png";
 import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
+import Link from "@components/Link.astro";
+import LinkGroup from "@components/LinkGroup.astro";
 ---
 
 <Layout title="Astro Starter">
@@ -14,4 +16,7 @@ import { Image } from "astro:assets";
     <SampleComponent text="This is a sample component!" />
     <SampleMarkdown />
   </Container>
+
+  <LinkGroup></LinkGroup>
+
 </Layout>

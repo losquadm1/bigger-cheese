@@ -1,0 +1,13 @@
+---
+import Link from "./Link.astro";
+
+const links = [
+    { title: "Link 1", url: "https://kristofflalicki.dev"},
+    { title: "Link 2", url: "https://kristofflalicki.dev"},
+];
+---
+
+{links.map(function(link){
+    return <Link data={link}/>
+
+})}
