@@ -10,13 +10,81 @@ import LinkGroup from "@components/LinkGroup.astro";
 ---
 
 <Layout title="Astro Starter">
-  <Container>
-    <Image src={AstroLogo} alt="" />
-    <h1>a simple Astro Starter Kit</h1>
-    <SampleComponent text="This is a sample component!" />
-    <SampleMarkdown />
-  </Container>
 
+<div class="project-body">
+
+  <section class="title">
+<h1>Michael Losquadro Launch Page</h1>
+</section>
+
+<section class="tvtime">
+<img src="tv.webp" alt="tv">
+
+<video autoplay loop muted playsinline>
+  <source src="tv static.webm" type="video/webm">
+</video>
+</section>
+
+<section class="linktree"
+  <SampleMarkdown />
   <LinkGroup></LinkGroup>
+</section>
+
+</div>
 
 </Layout>
+
+<style>
+
+.title {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column; 
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center
+}
+.title h1{
+  justify-self: center;
+  font-size: 30px;
+  text-align: center
+}
+
+.project-body {
+display: flex;
+flex-direction: column; 
+flex-wrap: wrap;
+align-content: center;
+allign-items: center
+}
+
+.tvtime{
+  justify-content: space-around;
+}
+.tvtime img{
+  width: 500px;
+  position: absolute;
+  justify-self: center;
+}
+
+@media (max-width:500px){
+ .tvtime img{
+  width:300px
+}}
+
+.tvtime video{
+  width: 400px;
+    padding: 20px;
+    margin-top: 60px;
+    justify-self: center;
+}
+@media (max-width:500px){
+ .tvtime video{
+  width:250px;
+  margin-top: 30px
+}}
+
+.linktree{
+  padding-top: 300px
+}
+</style>
