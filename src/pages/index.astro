@@ -7,6 +7,7 @@ import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
 import Link from "@components/Link.astro";
 import LinkGroup from "@components/LinkGroup.astro";
+import PortfolioButton from "@components/PortfolioButton.astro";
 ---
 
 <Layout title="Astro Starter">
@@ -28,10 +29,9 @@ import LinkGroup from "@components/LinkGroup.astro";
 <section class="linktree"
   <SampleMarkdown />
   <LinkGroup></LinkGroup>
+  <PortfolioButton></PortfolioButton>
 </section>
-
 </div>
-
 </Layout>
 
 <style>
