@@ -7,7 +7,7 @@ import { Content as SampleMarkdown } from "@content/sample-markdown.md";
 import { Image } from "astro:assets";
 import Link from "@components/Link.astro";
 import LinkGroup from "@components/LinkGroup.astro";
-import PortfolioButton from "@components/PortfolioButton.astro";
+import MasterButton from "@components/MasterButton.astro";
 ---
 
 <Layout title="Astro Starter">
@@ -26,15 +26,31 @@ import PortfolioButton from "@components/PortfolioButton.astro";
 </video>
 </section>
 
-<section class="linktree"
-  <SampleMarkdown />
-  <LinkGroup></LinkGroup>
-  <PortfolioButton></PortfolioButton>
+<section class="linktree">
+  <MasterButton url="https://sites.google.com/view/mlosquadroportfolio?usp=sharing" src="MyPortfolio UnSelected.webp" title="My Portfolio"/>
+  <MasterButton url="https://www.instagram.com/igobyimmichael/" src="MyInsta UnSelected.webp" title="My Instagram"/>
+  <MasterButton url="https://youtube.com/playlist?list=PLzora1j3YJJjHF0cmI6hW5PYrIOSc7YgL&si=dXHwUz19_SI-AGMH" src="YtButton UnSelected.webp" title='"The Chet Show" Full Series'/>
+  <MasterButton url="https://www.instagram.com/chetgotfelt/" src="ChetInsta UnSelected.webp" title="Chet Instagram"/>
 </section>
 </div>
 </Layout>
 
+
 <style>
+body{
+  background-color: black;
+}
+
+.linktree{
+  padding-top: 140px;
+  width: 70vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-conent: center;
+  align-self: center;
+}
 
 .title {
   padding-top: 50px;
@@ -45,6 +61,7 @@ import PortfolioButton from "@components/PortfolioButton.astro";
   justify-content: center
 }
 .title h1{
+  color: green;
   justify-self: center;
   font-size: 30px;
   text-align: center
@@ -84,7 +101,5 @@ allign-items: center
   margin-top: 30px
 }}
 
-.linktree{
-  padding-top: 300px
-}
+
 </style>

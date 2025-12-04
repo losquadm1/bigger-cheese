@@ -1,0 +1,29 @@
+---
+const {url, src, title}= Astro.props;
+---
+<section class="ChetWillKillMeOneDay">
+
+  <a href={url}>{title}</a>
+
+<div class="Chet4Lyfe">
+    <a href={url}><img src={src} alt={title}></a>
+</div>
+
+</section>
+
+<style>
+.Chet4Lyfe:hover{
+    filter: brightness(50%);
+}
+a{
+ color: green;
+ text-decoration: none;
+}
+img{
+    width:25vw;
+}
+.ChetWillKillMeOneDay{
+    padding: 10px
+}
+
+</style>
