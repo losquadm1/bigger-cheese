@@ -1,7 +1,7 @@
 ---
-const {url, src, title}= Astro.props;
+const {url, src, title, videosrc}= Astro.props;
 ---
-<section class="ChetWillKillMeOneDay">
+<section class="ChetWillKillMeOneDay" data-src={videosrc}>
 
   <a href={url}>{title}</a>
 
@@ -11,6 +11,34 @@ const {url, src, title}= Astro.props;
 
 </section>
 
+<script>
+
+    // add an event listener - when mouse enters section video src changes
+    // add a second event listener - replaces video source back to static
+        const video = document.querySelector('.tvImg');
+
+    const setSrc =(newSrc)=>{
+        video?.setAttribute('src',newSrc)
+        video?.play();
+    }
+
+    const clearSrc = ()=>{
+        video?.removeAttribute('src')
+        video.load();
+
+    }
+
+    const triggers = document.querySelectorAll('.ChetWillKillMeOneDay');
+    triggers.forEach((trigger)=>{
+        trigger.addEventListener('mouseenter',(e)=>{
+            setSrc(e.target.dataset.src)
+        })
+        trigger.addEventListener('mouseleave',()=>{
+           clearSrc();
+        })
+    })
+</script>
+
 <style>
 .Chet4Lyfe:hover{
     filter: brightness(50%);
@@ -18,12 +46,12 @@ const {url, src, title}= Astro.props;
 a{
  color: green;
  text-decoration: none;
+ font-size: 25px;
 }
 img{
-    width:25vw;
+    width:500px;
 }
 .ChetWillKillMeOneDay{
     padding: 10px
 }
-
 </style>
